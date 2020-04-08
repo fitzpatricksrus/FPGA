@@ -1,0 +1,35 @@
+Vivado Simulator 2019.2
+Time resolution is 1 ps
+ 0  0   1
+
+ 1  1   2
+
+ 2  2   4
+
+ 3  3   8
+
+ 4  4  16
+
+ 5  5  32
+
+ 6  6  64
+
+ 7  7 128
+
+ 8  8   0
+
+ 9  9   0
+
+10 10   0
+
+11 11   0
+
+12 12   0
+
+13 13   0
+
+14 14   0
+
+15 15   0
+
+$finish called at time : 80 ns : File "C:/Users/stuff/Documents/Projects/FPGA/seg7/seg7.srcs/sim_1/new/seg7_sim.v" Line 64
