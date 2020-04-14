@@ -1,5 +1,6 @@
 # compile verilog/system verilog design source files
 verilog xil_defaultlib  \
+"../../../../seg7.srcs/sources_1/new/Seg7Display.v" \
 "../../../../seg7.srcs/sources_1/new/seg7.v" \
 "../../../../seg7.srcs/sim_1/new/seg7_sim.v" \
 
