@@ -39,7 +39,7 @@ module Stack #(parameter dataSize=8, ndxSize=4) (
     		end
 		end
 		else if (pop == 0 && push == 1) begin
-			if (size < dataSize) begin
+			if (!full) begin
 	    		stackData[stackNdx] <= wData;
     			stackNdx <= stackNdx + 1;
     			tos <= wData;
