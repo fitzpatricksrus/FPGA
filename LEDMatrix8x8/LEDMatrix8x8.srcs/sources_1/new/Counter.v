@@ -1,11 +1,12 @@
 `timescale 1ns / 1ps
+`default_nettype none
 
 // counter from [intervalBegin, intervaleEnd)
 module Counter #( parameter bits = 4, intervalBegin = 0, intervalEnd = 10 )(
-    input clk,
-    input reset,
-    output maxTick,
-    output [bits-1:0] count
+    input wire clk,
+    input wire reset,
+    output wire maxTick,
+    output wire [bits-1:0] count
     );
     
     reg [bits-1:0] rCount;
