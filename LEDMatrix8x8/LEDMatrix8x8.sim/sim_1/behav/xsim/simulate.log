@@ -1,3 +1,3 @@
 Vivado Simulator 2019.2
 Time resolution is 1 ps
-$finish called at time : 90 ns : File "C:/Users/stuff/Documents/Projects/FPGA/LEDMatrix8x8/LEDMatrix8x8.srcs/sim_1/new/StackSim.v" Line 43
+$finish called at time : 85 ns : File "C:/Users/stuff/Documents/Projects/FPGA/LEDMatrix8x8/LEDMatrix8x8.srcs/sim_1/new/CounterSim.v" Line 24

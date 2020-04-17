@@ -24,7 +24,6 @@ module StackSim();
 		.empty(empty), 
 		.full(full)
 		);
-	
 
 	initial begin
 		clk = 0;
