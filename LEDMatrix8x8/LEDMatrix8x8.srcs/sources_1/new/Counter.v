@@ -2,7 +2,7 @@
 `default_nettype none
 
 // counter from [intervalBegin, intervaleEnd)
-module Counter #( parameter bits = 4, intervalBegin = 0, intervalEnd = 10 )(
+module Counter #(parameter bits = 4, intervalEnd = 2**bits - 1)(
     input wire clk,
     input wire reset,
     output wire maxTick,
@@ -15,13 +15,13 @@ module Counter #( parameter bits = 4, intervalBegin = 0, intervalEnd = 10 )(
     always @(posedge clk, posedge reset)
     begin
     	if (reset) begin
-    		rCount <= intervalBegin;
+    		rCount <= 0;
     	end else begin
     		rCount = rNext;
     	end
     end
     
-    assign maxTick = (rCount == (intervalEnd - 1)) ? 1 : 0; 
-    assign rNext = (rCount == (intervalEnd - 1)) ? intervalBegin : rCount + 1; 
+    assign maxTick = (rCount == (intervalEnd)) ? 1 : 0; 
+    assign rNext = (rCount == (intervalEnd)) ? 0 : rCount + 1; 
     assign count = rCount;
 endmodule

@@ -5,7 +5,7 @@ module LEDMatrix8x8 #(parameter rowBits=3, colBits=3)(
     input wire clk,
     input wire [(2**rowBits)*(2**colBits)-1:0] data,
     output reg [(2**rowBits)-1:0] rows,
-    output wire [(2**colBits)-1:0] cols
+    output reg [(2**colBits)-1:0] cols
     );
     
     localparam rowSize = 2**rowBits;
@@ -23,26 +23,4 @@ module LEDMatrix8x8 #(parameter rowBits=3, colBits=3)(
 	    	rows[i] = data[rowSize*colNdx + i];
 	    end
     end
-    
-	reg reset;
-	reg push;
-	reg pop;
-	reg [7:0] wData;
-	wire [3:0] size;
-	wire [7:0] tos;
-	wire empty;
-	wire full;
-	
-	Stack stack(
-		.clk(clk), 
-		.reset(reset), 
-		.push(push), 
-		.pop(pop), 
-		.wData(wData), 
-		.size(size), 
-		.tos(tos), 
-		.empty(empty), 
-		.full(full)
-		);
-        
 endmodule
