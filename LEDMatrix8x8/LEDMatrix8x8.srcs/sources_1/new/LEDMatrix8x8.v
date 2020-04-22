@@ -1,26 +1,23 @@
-`timescale 1ns / 1ps
+`timescale 1ns / 100ps
 `default_nettype none
 
 module LEDMatrix8x8 #(parameter rowBits=3, colBits=3)(
     input wire clk,
-    input wire [(2**rowBits)*(2**colBits)-1:0] data,
-    output reg [(2**rowBits)-1:0] rows,
-    output reg [(2**colBits)-1:0] cols
+    input wire reset,
+    output wire [(2**rowBits)-1:0] rows,
+    output wire [(2**colBits)-1:0] cols,
+    output wire [colBits-1:0] colNdx
     );
-    
-    localparam rowSize = 2**rowBits;
-    localparam colSize = 2**colBits;
-    
-    wire maxTick;
-    wire [colBits-1:0] colNdx;
-    
-    Counter#(.bits(3), .intervalBegin(0), .intervalEnd(7)) counter(.clk(clk), .reset(1'b0), .maxTick(maxTick), .count(colNdx));
-    DeMux#(.bits(8'h03)) colDeMux(.ndx(colNdx), .out(cols));
-    reg i;
 
-    always@(cols) begin
-    	for (i = 0; i < rowSize; i = i + 1) begin	
-	    	rows[i] = data[rowSize*colNdx + i];
-	    end
-    end
+    localparam colSize = 2**colBits;
+        
+	// counter cycles through the columns by index
+    Counter#(.ndxBits(colBits)) counter(.clk(clk), .reset(reset), .count(colNdx));
+
+    // output the col demux for current column
+    DeMux#(.ndxBits(colBits)) colDeMux(.ndx(colNdx), .out(cols));
+
+	// output the row data for current column
+    MatrixData#(.rowNdxBits(rowBits), .colNdxBits(colBits)) dataIn(colNdx, rows);    
+
 endmodule

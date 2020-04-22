@@ -1,6 +1,9 @@
 # compile verilog/system verilog design source files
 verilog xil_defaultlib  \
-"../../../../LEDMatrix8x8.srcs/sources_1/new/Stack.v" \
+"../../../../LEDMatrix8x8.srcs/sources_1/new/Counter.v" \
+"../../../../LEDMatrix8x8.srcs/sources_1/new/DeMux.v" \
+"../../../../LEDMatrix8x8.srcs/sources_1/new/LEDMatrix8x8.v" \
+"../../../../LEDMatrix8x8.srcs/sources_1/new/MatrixData.v" \
 "../../../../LEDMatrix8x8.srcs/sim_1/new/LEDMatrix8x8Sim.v" \
 
 # compile glbl module

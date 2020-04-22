@@ -1,11 +1,10 @@
-`timescale 1ns / 1ps
+`timescale 1ns / 100ps
 `default_nettype none
 
-module DeMux #(parameter bits=4)(
-	input wire signal,
-    input wire [bits - 1:0] ndx,
-    output wire [2^bits-1:0] out
+module DeMux #(parameter ndxBits=4)(
+    input wire [ndxBits - 1:0] ndx,
+    output wire [2**ndxBits-1:0] out
     );
         
-    assign out = signal << ndx;
+    assign out = 1'b1 << ndx;
 endmodule

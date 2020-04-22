@@ -20,12 +20,18 @@ module Stack #(parameter dataSize=8, ndxSize=4) (
 	assign size = stackNdx;
 	assign empty = stackNdx == 0;
 	assign full = stackNdx == maxIndex;
+	
+	initial begin
+		stackNdx <= 0;
+		stackData[0] <= 0;
+		tos <= 0;
+	end
     
     always@(posedge clk, posedge reset) begin
     	if (reset) begin
     		stackNdx <= 0;
     		stackData[0] <= 0;
-			tos = 0;
+			tos <= 0;
     	end
     	else if (pop == 1 && push == 0) begin
     		if (!empty) begin
@@ -34,7 +40,7 @@ module Stack #(parameter dataSize=8, ndxSize=4) (
 	    			tos <= stackData[stackNdx - 2];
 	    		end
 	    		else begin
-	    			tos = 0;
+	    			tos <= 0;
 	    		end
     		end
 		end
@@ -47,7 +53,7 @@ module Stack #(parameter dataSize=8, ndxSize=4) (
     	end
     	else if (push == 1 && pop == 1) begin
     		if (!empty) begin 
-	    		stackData[stackNdx] = wData;
+	    		stackData[stackNdx] <= wData;
     			tos <= wData;
     		end
     	end
