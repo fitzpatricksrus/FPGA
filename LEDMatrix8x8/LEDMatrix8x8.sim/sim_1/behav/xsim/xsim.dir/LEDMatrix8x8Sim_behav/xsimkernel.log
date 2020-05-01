@@ -1,7 +1,7 @@
-Running: xsim.dir/LEDMatrix8x8Sim_behav/xsimk.exe -simmode gui -wdb LEDMatrix8x8Sim_behav.wdb -simrunnum 0 -socket 50005
+Running: xsim.dir/LEDMatrix8x8Sim_behav/xsimk.exe -simmode gui -wdb LEDMatrix8x8Sim_behav.wdb -simrunnum 0 -socket 49922
 Design successfully loaded
-Design Loading Memory Usage: 5272 KB (Peak: 5272 KB)
-Design Loading CPU Usage: 93 ms
+Design Loading Memory Usage: 5344 KB (Peak: 5344 KB)
+Design Loading CPU Usage: 78 ms
 Simulation completed
-Simulation Memory Usage: 5956 KB (Peak: 5956 KB)
-Simulation CPU Usage: 109 ms
+Simulation Memory Usage: 6020 KB (Peak: 6020 KB)
+Simulation CPU Usage: 125 ms

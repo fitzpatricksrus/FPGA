@@ -1,0 +1,11 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  \
+"../../../../BlinkyLights.srcs/sources_1/imports/new/Counter.v" \
+"../../../../BlinkyLights.srcs/sources_1/imports/new/DeMux.v" \
+"../../../../BlinkyLights.srcs/sim_1/imports/new/CounterDemuxSim.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

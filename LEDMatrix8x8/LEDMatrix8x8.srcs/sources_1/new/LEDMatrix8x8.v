@@ -12,7 +12,7 @@ module LEDMatrix8x8 #(parameter rowBits=3, colBits=3)(
     localparam colSize = 2**colBits;
         
 	// counter cycles through the columns by index
-    Counter#(.ndxBits(colBits)) counter(.clk(clk), .reset(reset), .count(colNdx));
+    Counter#(.bits(colBits)) counter(.clk(clk), .reset(reset), .count(colNdx));
 
     // output the col demux for current column
     DeMux#(.ndxBits(colBits)) colDeMux(.ndx(colNdx), .out(cols));

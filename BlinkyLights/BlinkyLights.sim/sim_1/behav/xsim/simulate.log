@@ -1,0 +1,20 @@
+Vivado Simulator 2019.2
+Time resolution is 1 ps
+colNdx=0 rowData=129
+colNdx=1 rowData= 66
+colNdx=2 rowData= 36
+colNdx=3 rowData= 24
+colNdx=4 rowData= 24
+colNdx=5 rowData= 36
+colNdx=6 rowData= 66
+colNdx=7 rowData=129
+colNdx=0 rowData=129
+colNdx=1 rowData= 66
+colNdx=2 rowData= 36
+colNdx=3 rowData= 24
+colNdx=4 rowData= 24
+colNdx=5 rowData= 36
+colNdx=6 rowData= 66
+colNdx=7 rowData=129
+colNdx=0 rowData=129
+$finish called at time : 170 ns : File "C:/Users/stuff/Documents/Projects/FPGA/BlinkyLights/BlinkyLights.srcs/sim_1/new/MainSim.v" Line 32
