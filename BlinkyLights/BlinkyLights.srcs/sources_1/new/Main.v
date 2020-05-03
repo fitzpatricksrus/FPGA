@@ -1,18 +1,20 @@
 `timescale 1ns / 100ps
 
-module Main(
-	input wire CLK100MHZ,
+module Main#(parameter divisor = 10000000, divisorBits = 20) (
+	input wire clk,  // CLK100MHZ
     input wire reset,
-    input wire [7:0] rowPins,
-    input wire [7:0] colPins
+    output wire [7:0] rowPins,
+    output wire [7:0] colPins
     );
     
-    wire [2:0] colNdx;
-    reg [7:0] rowData = 0;
-    
-    Counter#(3) counter(CLK100MHZ, reset, colNdx);
-    LED1088AS ldx(CLK100MHZ, reset, rowData, colNdx, rowPins, colPins);
-	reg[7:0] data[0:7];
+	reg[7:0] data[0:7];	// constant data to be displayed
+    wire [2:0] colNdx;	// column index out of the counter
+    reg [7:0] rowData;	// data for column specified by colNdx
+    wire clk2;			// clock divided by divisor param
+        
+    ClockDivider#(divisor, divisorBits) clkDiv(clk, reset, clk2);
+    Counter#(3) counter(.clk(clk2), .reset(reset), .count(colNdx));
+    LED1088AS led(.clk(clk2), .reset(reset), .rowData(rowData), .colNdx(colNdx), .rowPins(rowPins), .colPins(colPins));
 	    
 	initial begin
 		data[3'b000] = 8'b10000001;
@@ -25,14 +27,12 @@ module Main(
 		data[3'b111] = 8'b10000001;
 	end
 	
-    always@(posedge reset) begin
-    	rowData <= 0;
+    always@(colNdx, reset) begin
+    	if (reset) begin
+    		rowData <= 0;
+    	end else begin
+	    	rowData <= data[colNdx];
+	    end
     end
-    
-    always@(colNdx) begin
-//    	rowData <= 8'b11111111 << colNdx;
-    	rowData <= data[colNdx];
-		$display("colNdx=%d rowData=%d", colNdx, data[colNdx]);
-    end
-    
+        
 endmodule
