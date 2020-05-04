@@ -1,0 +1,3 @@
+Vivado Simulator 2019.2
+Time resolution is 1 ps
+$finish called at time : 38 ns : File "C:/Users/stuff/Documents/Projects/FPGA/BlinkyLights/BlinkyLights.srcs/sim_1/new/DoubleBufferSim.v" Line 67
