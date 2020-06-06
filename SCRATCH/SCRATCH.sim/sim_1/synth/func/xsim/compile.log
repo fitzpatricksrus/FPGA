@@ -1,0 +1,7 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/stuff/Documents/Projects/FPGA/SCRATCH/SCRATCH.sim/sim_1/synth/func/xsim/InverterMainSim_func_synth.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module BinaryCounter
+INFO: [VRFC 10-311] analyzing module ClockDivider
+INFO: [VRFC 10-311] analyzing module InverterMain
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/stuff/Documents/Projects/FPGA/SCRATCH/SCRATCH.srcs/sim_1/new/InverterMainSim.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module InverterMainSim

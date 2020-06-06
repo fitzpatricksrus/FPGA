@@ -1,0 +1,5 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/stuff/Documents/Projects/FPGA/MatrixDriver/MatrixDriver.sim/sim_1/synth/func/xsim/ClockDividerSim_func_synth.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ClockDividerMain
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/stuff/Documents/Projects/FPGA/MatrixDriver/MatrixDriver.srcs/sim_1/imports/new/ClockDividerSim.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ClockDividerSim

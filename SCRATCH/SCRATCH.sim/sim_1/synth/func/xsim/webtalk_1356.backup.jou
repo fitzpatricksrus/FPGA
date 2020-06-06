@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Webtalk v2019.2.1 (64-bit)
+# SW Build 2729669 on Thu Dec  5 04:49:17 MST 2019
+# IP Build 2729494 on Thu Dec  5 07:38:25 MST 2019
+# Start of session at: Tue May 12 21:03:08 2020
+# Process ID: 1356
+# Current directory: C:/Users/stuff/Documents/Projects/FPGA/SCRATCH/SCRATCH.sim/sim_1/synth/func/xsim
+# Command line: wbtcv.exe -mode batch -source C:/Users/stuff/Documents/Projects/FPGA/SCRATCH/SCRATCH.sim/sim_1/synth/func/xsim/xsim.dir/InverterMainSim_func_synth/webtalk/xsim_webtalk.tcl -notrace
+# Log file: C:/Users/stuff/Documents/Projects/FPGA/SCRATCH/SCRATCH.sim/sim_1/synth/func/xsim/webtalk.log
+# Journal file: C:/Users/stuff/Documents/Projects/FPGA/SCRATCH/SCRATCH.sim/sim_1/synth/func/xsim\webtalk.jou
+#-----------------------------------------------------------
+source C:/Users/stuff/Documents/Projects/FPGA/SCRATCH/SCRATCH.sim/sim_1/synth/func/xsim/xsim.dir/InverterMainSim_func_synth/webtalk/xsim_webtalk.tcl -notrace

@@ -4,16 +4,14 @@ Running: D:/FPGA/Xilinx/Vivado/2019.2/bin/unwrapped/win64.o/xelab.exe -wto 24107
 Using 2 slave threads.
 Starting static elaboration
 Pass Through NonSizing Optimizer
-WARNING: [VRFC 10-2861] module 'Counter' does not have a parameter named ndxBits [C:/Users/stuff/Documents/Projects/FPGA/LEDMatrix8x8/LEDMatrix8x8.srcs/sources_1/new/LEDMatrix8x8.v:15]
-WARNING: [VRFC 10-3091] actual bit length 3 differs from formal bit length 4 for port 'count' [C:/Users/stuff/Documents/Projects/FPGA/LEDMatrix8x8/LEDMatrix8x8.srcs/sources_1/new/LEDMatrix8x8.v:15]
 Completed static elaboration
 Starting simulation data flow analysis
 Completed simulation data flow analysis
 Time Resolution for simulation is 1ps
-Compiling module xil_defaultlib.Counter_default
+Compiling module xil_defaultlib.Counter(bits=3)
 Compiling module xil_defaultlib.DeMux(ndxBits=3)
 Compiling module xil_defaultlib.MatrixData_default
-Compiling module xil_defaultlib.LEDMatrix8x8_default
+Compiling module xil_defaultlib.LEDMatrix8x8(rowCnt=8,colCnt=8,r...
 Compiling module xil_defaultlib.LEDMatrix8x8Sim
 Compiling module xil_defaultlib.glbl
 Built simulation snapshot LEDMatrix8x8Sim_behav

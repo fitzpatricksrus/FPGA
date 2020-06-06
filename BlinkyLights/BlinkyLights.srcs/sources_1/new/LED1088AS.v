@@ -1,6 +1,10 @@
 `timescale 1ns / 100ps
 `default_nettype none
 
+/*
+LED matrix that drives a single column at a time. On rising edge of clock it latches  
+the rowData and converts the colNdx to the proper column output pin and latches that.  
+*/
 module LED1088AS(
     input wire clk,
     input wire reset,

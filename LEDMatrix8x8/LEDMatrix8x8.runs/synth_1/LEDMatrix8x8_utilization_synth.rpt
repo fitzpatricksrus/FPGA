@@ -1,7 +1,7 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
-| Date         : Thu Apr 23 11:19:12 2020
+| Date         : Mon May 11 10:50:44 2020
 | Host         : JohnsGo running 64-bit major release  (build 9200)
 | Command      : report_utilization -file LEDMatrix8x8_utilization_synth.rpt -pb LEDMatrix8x8_utilization_synth.pb
 | Design       : LEDMatrix8x8

@@ -1,0 +1,17 @@
+Vivado Simulator 2019.2
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: D:/FPGA/Xilinx/Vivado/2019.2/bin/unwrapped/win64.o/xelab.exe -wto ed8e6f0eae344493917ae80cdb6e4d4e --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L secureip --snapshot ClockDividerSim_func_synth xil_defaultlib.ClockDividerSim xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+WARNING: [VRFC 10-2861] module 'ClockDividerMain' does not have a parameter named divisor [C:/Users/stuff/Documents/Projects/FPGA/MatrixDriver/MatrixDriver.srcs/sim_1/imports/new/ClockDividerSim.v:10]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module unisims_ver.IBUF
+Compiling module unisims_ver.OBUF
+Compiling module xil_defaultlib.ClockDividerMain
+Compiling module xil_defaultlib.ClockDividerSim
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot ClockDividerSim_func_synth

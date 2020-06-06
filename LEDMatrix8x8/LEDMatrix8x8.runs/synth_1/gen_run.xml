@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7s25csga324-1" LaunchTime="1587655017">
+<GenRun Id="synth_1" LaunchPart="xc7s25csga324-1" LaunchTime="1589208529">
   <File Type="PA-TCL" Name="LEDMatrix8x8.tcl"/>
   <File Type="RDS-PROPCONSTRS" Name="LEDMatrix8x8_drc_synth.rpt"/>
   <File Type="REPORTS-TCL" Name="LEDMatrix8x8_reports.tcl"/>

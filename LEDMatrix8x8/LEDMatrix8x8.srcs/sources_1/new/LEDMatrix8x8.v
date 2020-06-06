@@ -1,11 +1,11 @@
 `timescale 1ns / 100ps
 `default_nettype none
 
-module LEDMatrix8x8 #(parameter rowBits=3, colBits=3)(
+module LEDMatrix8x8 #(parameter rowCnt=3, colCnt=3, rowBits=$clog2(rowCnt), colBits=$clog2(colCnt))(
     input wire clk,
     input wire reset,
-    output wire [(2**rowBits)-1:0] rows,
-    output wire [(2**colBits)-1:0] cols,
+    output wire [rowCnt-1:0] rows,
+    output wire [colCnt-1:0] cols,
     output wire [colBits-1:0] colNdx
     );
 

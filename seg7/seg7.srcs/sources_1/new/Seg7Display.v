@@ -1,7 +1,7 @@
 `timescale 1ns / 1ps
 
 module Seg7Display(
-    input [3:0] value,
+    input wire [3:0] value,
     output reg [7:0] led
     );
 

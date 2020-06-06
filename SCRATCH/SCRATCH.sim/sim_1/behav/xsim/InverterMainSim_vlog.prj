@@ -1,0 +1,12 @@
+# compile verilog/system verilog design source files
+sv xil_defaultlib  \
+"../../../../SCRATCH.srcs/sources_1/new/BinaryCounter.sv" \
+"../../../../SCRATCH.srcs/sources_1/new/InverterMain.v" \
+"../../../../SCRATCH.srcs/sources_1/new/MemoryModulator.sv" \
+"../../../../SCRATCH.srcs/sim_1/new/InverterMainSim.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

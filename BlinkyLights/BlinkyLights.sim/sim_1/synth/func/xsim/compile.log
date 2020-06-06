@@ -1,0 +1,5 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/stuff/Documents/Projects/FPGA/BlinkyLights/BlinkyLights.sim/sim_1/synth/func/xsim/MainSim_func_synth.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Main
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/stuff/Documents/Projects/FPGA/BlinkyLights/BlinkyLights.srcs/sim_1/new/MainSim.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module MainSim

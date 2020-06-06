@@ -1,0 +1,9 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  \
+"InverterMainSim_time_synth.v" \
+
+sv xil_defaultlib  \
+"../../../../../SCRATCH.srcs/sim_1/new/InverterMainSim.v" \
+
+# Do not sort compile order
+nosort

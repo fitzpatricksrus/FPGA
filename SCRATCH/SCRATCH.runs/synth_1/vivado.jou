@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2019.2.1 (64-bit)
+# SW Build 2729669 on Thu Dec  5 04:49:17 MST 2019
+# IP Build 2729494 on Thu Dec  5 07:38:25 MST 2019
+# Start of session at: Wed May 20 15:37:00 2020
+# Process ID: 3796
+# Current directory: C:/Users/stuff/Documents/Projects/FPGA/SCRATCH/SCRATCH.runs/synth_1
+# Command line: vivado.exe -log InverterMain.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source InverterMain.tcl
+# Log file: C:/Users/stuff/Documents/Projects/FPGA/SCRATCH/SCRATCH.runs/synth_1/InverterMain.vds
+# Journal file: C:/Users/stuff/Documents/Projects/FPGA/SCRATCH/SCRATCH.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source InverterMain.tcl -notrace

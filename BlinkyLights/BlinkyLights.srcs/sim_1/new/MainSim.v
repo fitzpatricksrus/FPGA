@@ -66,7 +66,7 @@ module MainSim();
 		clk = 1; #5 clk = 0; #5
 		clk = 1; #5 clk = 0; #5
 	
-		$finish();
+		$stop();
 	end
 
 endmodule

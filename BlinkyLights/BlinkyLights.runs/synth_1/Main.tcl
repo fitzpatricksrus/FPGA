@@ -19,7 +19,6 @@ proc create_report { reportName command } {
 }
 set_param chipscope.maxJobs 1
 set_param ced.repoPaths C:/Users/stuff/AppData/Roaming/Xilinx/Vivado/2019.2/xhub/ced_store
-set_param xicom.use_bs_reader 1
 create_project -in_memory -part xc7s25csga324-1
 
 set_param project.singleFileAddWarning.threshold 0
@@ -32,13 +31,11 @@ set_property target_language Verilog [current_project]
 set_property board_part digilentinc.com:arty-s7-25:part0:1.0 [current_project]
 set_property ip_output_repo c:/Users/stuff/Documents/Projects/FPGA/BlinkyLights/BlinkyLights.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
-read_verilog -library xil_defaultlib {
-  C:/Users/stuff/Documents/Projects/FPGA/BlinkyLights/BlinkyLights.srcs/sources_1/imports/new/Counter.v
-  C:/Users/stuff/Documents/Projects/FPGA/BlinkyLights/BlinkyLights.srcs/sources_1/imports/new/DeMux.v
-  C:/Users/stuff/Documents/Projects/FPGA/BlinkyLights/BlinkyLights.srcs/sources_1/new/LED1088AS.v
-  C:/Users/stuff/Documents/Projects/FPGA/BlinkyLights/BlinkyLights.srcs/sources_1/new/StepDownCounter.v
-  C:/Users/stuff/Documents/Projects/FPGA/BlinkyLights/BlinkyLights.srcs/sources_1/new/Main.v
+read_verilog -library xil_defaultlib -sv {
+  C:/Users/stuff/Documents/Projects/FPGA/BlinkyLights/BlinkyLights.srcs/sources_1/new/ClockDivider.v
+  C:/Users/stuff/Documents/Projects/FPGA/BlinkyLights/BlinkyLights.srcs/sources_1/new/LEDMatrixDriver.v
 }
+read_verilog -library xil_defaultlib C:/Users/stuff/Documents/Projects/FPGA/BlinkyLights/BlinkyLights.srcs/sources_1/new/Main.v
 # Mark all dcp files as not used in implementation to prevent them from being
 # stitched into the results of this synthesis run. Any black boxes in the
 # design are intentionally left as such for best results. Dcp files will be

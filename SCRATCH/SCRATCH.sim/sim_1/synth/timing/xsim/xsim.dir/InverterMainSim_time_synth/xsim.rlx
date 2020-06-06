@@ -1,0 +1,12 @@
+
+{ 
+    crc :  8103855094666865855  , 
+    ccp_crc :  0  , 
+    cmdline : " -wto 7587c12b0c184b55a1ad1eb39baeaffc --incr --debug typical --relax --mt 2 --maxdelay -L xil_defaultlib -L simprims_ver -L secureip --snapshot InverterMainSim_time_synth -transport_int_delays -pulse_r 0 -pulse_int_r 0 -pulse_e 0 -pulse_int_e 0 xil_defaultlib.InverterMainSim xil_defaultlib.glbl" , 
+    buildDate : "Dec  5 2019" , 
+    buildTime : "05:06:03" , 
+    linkCmd : "D:\\FPGA\\Xilinx\\Vivado\\2019.2\\data\\..\\tps\\mingw\\6.2.0\\win64.o\\nt\\bin\\gcc.exe -Wa,-W  -O -Wl,--stack,104857600 -o \"xsim.dir/InverterMainSim_time_synth/xsimk.exe\"   \"xsim.dir/InverterMainSim_time_synth/obj/xsim_0.win64.obj\" \"xsim.dir/InverterMainSim_time_synth/obj/xsim_1.win64.obj\" -L\"D:\\FPGA\\Xilinx\\Vivado\\2019.2\\lib\\win64.o\" -lrdi_simulator_kernel   -lrdi_simbridge_kernel" , 
+    aggregate_nets : 
+    [ 
+    ] 
+} 

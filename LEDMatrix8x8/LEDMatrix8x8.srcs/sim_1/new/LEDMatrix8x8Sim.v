@@ -13,7 +13,7 @@ module LEDMatrix8x8Sim();
     
     reg[4:0] i;
     
-    LEDMatrix8x8#(.rowBits(rowBits),.colBits(colBits)) m(
+    LEDMatrix8x8#(.rowCnt(2**rowBits), .colCnt(2**colBits), .rowBits(rowBits),.colBits(colBits)) m(
     	.clk(clk), 
     	.reset(reset), 
     	.rows(rows), 

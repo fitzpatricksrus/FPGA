@@ -9,16 +9,16 @@
     ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 
 source LEDMatrix8x8.tcl -notrace
-create_project: Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 462.094 ; gain = 180.012
+create_project: Time (s): cpu = 00:00:07 ; elapsed = 00:00:12 . Memory (MB): peak = 463.852 ; gain = 163.379
 Command: synth_design -top LEDMatrix8x8 -part xc7s25csga324-1
 Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7s25'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7s25'
 INFO: [Device 21-403] Loading part xc7s25csga324-1
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 14644 
+INFO: Helper process launched with PID 13236 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:13 ; elapsed = 00:00:15 . Memory (MB): peak = 966.945 ; gain = 235.434
+Starting RTL Elaboration : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 967.547 ; gain = 235.426
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'LEDMatrix8x8' [C:/Users/stuff/Documents/Projects/FPGA/LEDMatrix8x8/LEDMatrix8x8.srcs/sources_1/new/LEDMatrix8x8.v:4]
 	Parameter rowBits bound to: 3 - type: integer 
@@ -39,7 +39,7 @@ INFO: [Synth 8-6157] synthesizing module 'MatrixData' [C:/Users/stuff/Documents/
 INFO: [Synth 8-6155] done synthesizing module 'MatrixData' (3#1) [C:/Users/stuff/Documents/Projects/FPGA/LEDMatrix8x8/LEDMatrix8x8.srcs/sources_1/new/MatrixData.v:4]
 INFO: [Synth 8-6155] done synthesizing module 'LEDMatrix8x8' (4#1) [C:/Users/stuff/Documents/Projects/FPGA/LEDMatrix8x8/LEDMatrix8x8.srcs/sources_1/new/LEDMatrix8x8.v:4]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:16 ; elapsed = 00:00:19 . Memory (MB): peak = 1039.055 ; gain = 307.543
+Finished RTL Elaboration : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 1040.207 ; gain = 308.086
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -52,94 +52,127 @@ Report Check Netlist:
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:18 ; elapsed = 00:00:20 . Memory (MB): peak = 1039.055 ; gain = 307.543
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 1040.207 ; gain = 308.086
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:18 ; elapsed = 00:00:21 . Memory (MB): peak = 1039.055 ; gain = 307.543
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 1040.207 ; gain = 308.086
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1039.055 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1040.207 ; gain = 0.000
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
 Parsing XDC File [C:/Users/stuff/Documents/Projects/FPGA/LEDMatrix8x8/LEDMatrix8x8.srcs/constrs_1/new/LEDMatrixConstraints.xdc]
-WARNING: [Vivado 12-584] No ports matched 'rowPin[0]'. [C:/Users/stuff/Documents/Projects/FPGA/LEDMatrix8x8/LEDMatrix8x8.srcs/constrs_1/new/LEDMatrixConstraints.xdc:103]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/stuff/Documents/Projects/FPGA/LEDMatrix8x8/LEDMatrix8x8.srcs/constrs_1/new/LEDMatrixConstraints.xdc:103]
+WARNING: [Vivado 12-584] No ports matched 'CLK100MHZ'. [C:/Users/stuff/Documents/Projects/FPGA/LEDMatrix8x8/LEDMatrix8x8.srcs/constrs_1/new/LEDMatrixConstraints.xdc:9]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/stuff/Documents/Projects/FPGA/LEDMatrix8x8/LEDMatrix8x8.srcs/constrs_1/new/LEDMatrixConstraints.xdc:9]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'rowPin[1]'. [C:/Users/stuff/Documents/Projects/FPGA/LEDMatrix8x8/LEDMatrix8x8.srcs/constrs_1/new/LEDMatrixConstraints.xdc:104]
+WARNING: [Vivado 12-584] No ports matched 'CLK100MHZ'. [C:/Users/stuff/Documents/Projects/FPGA/LEDMatrix8x8/LEDMatrix8x8.srcs/constrs_1/new/LEDMatrixConstraints.xdc:10]
+CRITICAL WARNING: [Vivado 12-4739] create_clock:No valid object(s) found for '-objects [get_ports CLK100MHZ]'. [C:/Users/stuff/Documents/Projects/FPGA/LEDMatrix8x8/LEDMatrix8x8.srcs/constrs_1/new/LEDMatrixConstraints.xdc:10]
+Resolution: Check if the specified object(s) exists in the current design. If it does, ensure that the correct design hierarchy was specified for the object. If you are working with clocks, make sure create_clock was used to create the clock object before it is referenced.
+WARNING: [Vivado 12-584] No ports matched 'sw[0]'. [C:/Users/stuff/Documents/Projects/FPGA/LEDMatrix8x8/LEDMatrix8x8.srcs/constrs_1/new/LEDMatrixConstraints.xdc:13]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/stuff/Documents/Projects/FPGA/LEDMatrix8x8/LEDMatrix8x8.srcs/constrs_1/new/LEDMatrixConstraints.xdc:13]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'sw[1]'. [C:/Users/stuff/Documents/Projects/FPGA/LEDMatrix8x8/LEDMatrix8x8.srcs/constrs_1/new/LEDMatrixConstraints.xdc:14]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/stuff/Documents/Projects/FPGA/LEDMatrix8x8/LEDMatrix8x8.srcs/constrs_1/new/LEDMatrixConstraints.xdc:14]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'sw[2]'. [C:/Users/stuff/Documents/Projects/FPGA/LEDMatrix8x8/LEDMatrix8x8.srcs/constrs_1/new/LEDMatrixConstraints.xdc:15]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/stuff/Documents/Projects/FPGA/LEDMatrix8x8/LEDMatrix8x8.srcs/constrs_1/new/LEDMatrixConstraints.xdc:15]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'sw[3]'. [C:/Users/stuff/Documents/Projects/FPGA/LEDMatrix8x8/LEDMatrix8x8.srcs/constrs_1/new/LEDMatrixConstraints.xdc:16]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/stuff/Documents/Projects/FPGA/LEDMatrix8x8/LEDMatrix8x8.srcs/constrs_1/new/LEDMatrixConstraints.xdc:16]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led[0]'. [C:/Users/stuff/Documents/Projects/FPGA/LEDMatrix8x8/LEDMatrix8x8.srcs/constrs_1/new/LEDMatrixConstraints.xdc:27]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/stuff/Documents/Projects/FPGA/LEDMatrix8x8/LEDMatrix8x8.srcs/constrs_1/new/LEDMatrixConstraints.xdc:27]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led[1]'. [C:/Users/stuff/Documents/Projects/FPGA/LEDMatrix8x8/LEDMatrix8x8.srcs/constrs_1/new/LEDMatrixConstraints.xdc:28]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/stuff/Documents/Projects/FPGA/LEDMatrix8x8/LEDMatrix8x8.srcs/constrs_1/new/LEDMatrixConstraints.xdc:28]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led[2]'. [C:/Users/stuff/Documents/Projects/FPGA/LEDMatrix8x8/LEDMatrix8x8.srcs/constrs_1/new/LEDMatrixConstraints.xdc:29]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/stuff/Documents/Projects/FPGA/LEDMatrix8x8/LEDMatrix8x8.srcs/constrs_1/new/LEDMatrixConstraints.xdc:29]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led[3]'. [C:/Users/stuff/Documents/Projects/FPGA/LEDMatrix8x8/LEDMatrix8x8.srcs/constrs_1/new/LEDMatrixConstraints.xdc:30]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/stuff/Documents/Projects/FPGA/LEDMatrix8x8/LEDMatrix8x8.srcs/constrs_1/new/LEDMatrixConstraints.xdc:30]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'resetSwitch'. [C:/Users/stuff/Documents/Projects/FPGA/LEDMatrix8x8/LEDMatrix8x8.srcs/constrs_1/new/LEDMatrixConstraints.xdc:33]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/stuff/Documents/Projects/FPGA/LEDMatrix8x8/LEDMatrix8x8.srcs/constrs_1/new/LEDMatrixConstraints.xdc:33]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'colPins[0]'. [C:/Users/stuff/Documents/Projects/FPGA/LEDMatrix8x8/LEDMatrix8x8.srcs/constrs_1/new/LEDMatrixConstraints.xdc:104]
 CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/stuff/Documents/Projects/FPGA/LEDMatrix8x8/LEDMatrix8x8.srcs/constrs_1/new/LEDMatrixConstraints.xdc:104]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'rowPin[2]'. [C:/Users/stuff/Documents/Projects/FPGA/LEDMatrix8x8/LEDMatrix8x8.srcs/constrs_1/new/LEDMatrixConstraints.xdc:105]
+WARNING: [Vivado 12-584] No ports matched 'colPins[1]'. [C:/Users/stuff/Documents/Projects/FPGA/LEDMatrix8x8/LEDMatrix8x8.srcs/constrs_1/new/LEDMatrixConstraints.xdc:105]
 CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/stuff/Documents/Projects/FPGA/LEDMatrix8x8/LEDMatrix8x8.srcs/constrs_1/new/LEDMatrixConstraints.xdc:105]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'rowPin[3]'. [C:/Users/stuff/Documents/Projects/FPGA/LEDMatrix8x8/LEDMatrix8x8.srcs/constrs_1/new/LEDMatrixConstraints.xdc:106]
+WARNING: [Vivado 12-584] No ports matched 'colPins[2]'. [C:/Users/stuff/Documents/Projects/FPGA/LEDMatrix8x8/LEDMatrix8x8.srcs/constrs_1/new/LEDMatrixConstraints.xdc:106]
 CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/stuff/Documents/Projects/FPGA/LEDMatrix8x8/LEDMatrix8x8.srcs/constrs_1/new/LEDMatrixConstraints.xdc:106]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'rowPin[4]'. [C:/Users/stuff/Documents/Projects/FPGA/LEDMatrix8x8/LEDMatrix8x8.srcs/constrs_1/new/LEDMatrixConstraints.xdc:107]
+WARNING: [Vivado 12-584] No ports matched 'colPins[3]'. [C:/Users/stuff/Documents/Projects/FPGA/LEDMatrix8x8/LEDMatrix8x8.srcs/constrs_1/new/LEDMatrixConstraints.xdc:107]
 CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/stuff/Documents/Projects/FPGA/LEDMatrix8x8/LEDMatrix8x8.srcs/constrs_1/new/LEDMatrixConstraints.xdc:107]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'rowPin[5]'. [C:/Users/stuff/Documents/Projects/FPGA/LEDMatrix8x8/LEDMatrix8x8.srcs/constrs_1/new/LEDMatrixConstraints.xdc:108]
+WARNING: [Vivado 12-584] No ports matched 'colPins[4]'. [C:/Users/stuff/Documents/Projects/FPGA/LEDMatrix8x8/LEDMatrix8x8.srcs/constrs_1/new/LEDMatrixConstraints.xdc:108]
 CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/stuff/Documents/Projects/FPGA/LEDMatrix8x8/LEDMatrix8x8.srcs/constrs_1/new/LEDMatrixConstraints.xdc:108]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'rowPin[6]'. [C:/Users/stuff/Documents/Projects/FPGA/LEDMatrix8x8/LEDMatrix8x8.srcs/constrs_1/new/LEDMatrixConstraints.xdc:109]
+WARNING: [Vivado 12-584] No ports matched 'colPins[5]'. [C:/Users/stuff/Documents/Projects/FPGA/LEDMatrix8x8/LEDMatrix8x8.srcs/constrs_1/new/LEDMatrixConstraints.xdc:109]
 CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/stuff/Documents/Projects/FPGA/LEDMatrix8x8/LEDMatrix8x8.srcs/constrs_1/new/LEDMatrixConstraints.xdc:109]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'rowPin[7]'. [C:/Users/stuff/Documents/Projects/FPGA/LEDMatrix8x8/LEDMatrix8x8.srcs/constrs_1/new/LEDMatrixConstraints.xdc:110]
+WARNING: [Vivado 12-584] No ports matched 'colPins[6]'. [C:/Users/stuff/Documents/Projects/FPGA/LEDMatrix8x8/LEDMatrix8x8.srcs/constrs_1/new/LEDMatrixConstraints.xdc:110]
 CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/stuff/Documents/Projects/FPGA/LEDMatrix8x8/LEDMatrix8x8.srcs/constrs_1/new/LEDMatrixConstraints.xdc:110]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'colPin[0]'. [C:/Users/stuff/Documents/Projects/FPGA/LEDMatrix8x8/LEDMatrix8x8.srcs/constrs_1/new/LEDMatrixConstraints.xdc:111]
+WARNING: [Vivado 12-584] No ports matched 'colPins[7]'. [C:/Users/stuff/Documents/Projects/FPGA/LEDMatrix8x8/LEDMatrix8x8.srcs/constrs_1/new/LEDMatrixConstraints.xdc:111]
 CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/stuff/Documents/Projects/FPGA/LEDMatrix8x8/LEDMatrix8x8.srcs/constrs_1/new/LEDMatrixConstraints.xdc:111]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'colPin[1]'. [C:/Users/stuff/Documents/Projects/FPGA/LEDMatrix8x8/LEDMatrix8x8.srcs/constrs_1/new/LEDMatrixConstraints.xdc:112]
+WARNING: [Vivado 12-584] No ports matched 'rowPins[0]'. [C:/Users/stuff/Documents/Projects/FPGA/LEDMatrix8x8/LEDMatrix8x8.srcs/constrs_1/new/LEDMatrixConstraints.xdc:112]
 CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/stuff/Documents/Projects/FPGA/LEDMatrix8x8/LEDMatrix8x8.srcs/constrs_1/new/LEDMatrixConstraints.xdc:112]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'colPin[2]'. [C:/Users/stuff/Documents/Projects/FPGA/LEDMatrix8x8/LEDMatrix8x8.srcs/constrs_1/new/LEDMatrixConstraints.xdc:113]
+WARNING: [Vivado 12-584] No ports matched 'rowPins[1]'. [C:/Users/stuff/Documents/Projects/FPGA/LEDMatrix8x8/LEDMatrix8x8.srcs/constrs_1/new/LEDMatrixConstraints.xdc:113]
 CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/stuff/Documents/Projects/FPGA/LEDMatrix8x8/LEDMatrix8x8.srcs/constrs_1/new/LEDMatrixConstraints.xdc:113]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'colPin[3]'. [C:/Users/stuff/Documents/Projects/FPGA/LEDMatrix8x8/LEDMatrix8x8.srcs/constrs_1/new/LEDMatrixConstraints.xdc:114]
+WARNING: [Vivado 12-584] No ports matched 'rowPins[2]'. [C:/Users/stuff/Documents/Projects/FPGA/LEDMatrix8x8/LEDMatrix8x8.srcs/constrs_1/new/LEDMatrixConstraints.xdc:114]
 CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/stuff/Documents/Projects/FPGA/LEDMatrix8x8/LEDMatrix8x8.srcs/constrs_1/new/LEDMatrixConstraints.xdc:114]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'colPin[4]'. [C:/Users/stuff/Documents/Projects/FPGA/LEDMatrix8x8/LEDMatrix8x8.srcs/constrs_1/new/LEDMatrixConstraints.xdc:115]
+WARNING: [Vivado 12-584] No ports matched 'rowPins[3]'. [C:/Users/stuff/Documents/Projects/FPGA/LEDMatrix8x8/LEDMatrix8x8.srcs/constrs_1/new/LEDMatrixConstraints.xdc:115]
 CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/stuff/Documents/Projects/FPGA/LEDMatrix8x8/LEDMatrix8x8.srcs/constrs_1/new/LEDMatrixConstraints.xdc:115]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'colPin[5]'. [C:/Users/stuff/Documents/Projects/FPGA/LEDMatrix8x8/LEDMatrix8x8.srcs/constrs_1/new/LEDMatrixConstraints.xdc:116]
+WARNING: [Vivado 12-584] No ports matched 'rowPins[4]'. [C:/Users/stuff/Documents/Projects/FPGA/LEDMatrix8x8/LEDMatrix8x8.srcs/constrs_1/new/LEDMatrixConstraints.xdc:116]
 CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/stuff/Documents/Projects/FPGA/LEDMatrix8x8/LEDMatrix8x8.srcs/constrs_1/new/LEDMatrixConstraints.xdc:116]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'colPin[6]'. [C:/Users/stuff/Documents/Projects/FPGA/LEDMatrix8x8/LEDMatrix8x8.srcs/constrs_1/new/LEDMatrixConstraints.xdc:117]
+WARNING: [Vivado 12-584] No ports matched 'rowPins[5]'. [C:/Users/stuff/Documents/Projects/FPGA/LEDMatrix8x8/LEDMatrix8x8.srcs/constrs_1/new/LEDMatrixConstraints.xdc:117]
 CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/stuff/Documents/Projects/FPGA/LEDMatrix8x8/LEDMatrix8x8.srcs/constrs_1/new/LEDMatrixConstraints.xdc:117]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'colPin[7]'. [C:/Users/stuff/Documents/Projects/FPGA/LEDMatrix8x8/LEDMatrix8x8.srcs/constrs_1/new/LEDMatrixConstraints.xdc:118]
+WARNING: [Vivado 12-584] No ports matched 'rowPins[6]'. [C:/Users/stuff/Documents/Projects/FPGA/LEDMatrix8x8/LEDMatrix8x8.srcs/constrs_1/new/LEDMatrixConstraints.xdc:118]
 CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/stuff/Documents/Projects/FPGA/LEDMatrix8x8/LEDMatrix8x8.srcs/constrs_1/new/LEDMatrixConstraints.xdc:118]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'rowPins[7]'. [C:/Users/stuff/Documents/Projects/FPGA/LEDMatrix8x8/LEDMatrix8x8.srcs/constrs_1/new/LEDMatrixConstraints.xdc:119]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/stuff/Documents/Projects/FPGA/LEDMatrix8x8/LEDMatrix8x8.srcs/constrs_1/new/LEDMatrixConstraints.xdc:119]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
 Finished Parsing XDC File [C:/Users/stuff/Documents/Projects/FPGA/LEDMatrix8x8/LEDMatrix8x8.srcs/constrs_1/new/LEDMatrixConstraints.xdc]
 INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/stuff/Documents/Projects/FPGA/LEDMatrix8x8/LEDMatrix8x8.srcs/constrs_1/new/LEDMatrixConstraints.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/LEDMatrix8x8_propImpl.xdc].
 Resolution: To avoid this warning, move constraints listed in [.Xil/LEDMatrix8x8_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1080.188 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1081.359 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.021 . Memory (MB): peak = 1080.188 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.016 . Memory (MB): peak = 1081.359 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:34 ; elapsed = 00:00:40 . Memory (MB): peak = 1080.188 ; gain = 348.676
+Finished Constraint Validation : Time (s): cpu = 00:00:28 ; elapsed = 00:00:30 . Memory (MB): peak = 1081.359 ; gain = 349.238
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7s25csga324-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:34 ; elapsed = 00:00:40 . Memory (MB): peak = 1080.188 ; gain = 348.676
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:28 ; elapsed = 00:00:30 . Memory (MB): peak = 1081.359 ; gain = 349.238
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:34 ; elapsed = 00:00:40 . Memory (MB): peak = 1080.188 ; gain = 348.676
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:28 ; elapsed = 00:00:30 . Memory (MB): peak = 1081.359 ; gain = 349.238
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-5544] ROM "data" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:34 ; elapsed = 00:00:40 . Memory (MB): peak = 1080.188 ; gain = 348.676
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:28 ; elapsed = 00:00:31 . Memory (MB): peak = 1081.359 ; gain = 349.238
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -194,7 +227,7 @@ Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 Warning: Parallel synthesis criteria is not met 
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:39 ; elapsed = 00:00:45 . Memory (MB): peak = 1080.188 ; gain = 348.676
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:32 ; elapsed = 00:00:35 . Memory (MB): peak = 1081.359 ; gain = 349.238
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -206,13 +239,13 @@ Report RTL Partitions:
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:01:00 ; elapsed = 00:01:08 . Memory (MB): peak = 1114.258 ; gain = 382.746
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:51 ; elapsed = 00:00:54 . Memory (MB): peak = 1114.492 ; gain = 382.371
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:01:00 ; elapsed = 00:01:08 . Memory (MB): peak = 1114.258 ; gain = 382.746
+Finished Timing Optimization : Time (s): cpu = 00:00:51 ; elapsed = 00:00:54 . Memory (MB): peak = 1114.566 ; gain = 382.445
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -224,7 +257,7 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:01:00 ; elapsed = 00:01:08 . Memory (MB): peak = 1123.922 ; gain = 392.410
+Finished Technology Mapping : Time (s): cpu = 00:00:51 ; elapsed = 00:00:54 . Memory (MB): peak = 1124.102 ; gain = 391.980
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -248,13 +281,13 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:01:15 ; elapsed = 00:01:25 . Memory (MB): peak = 1139.715 ; gain = 408.203
+Finished IO Insertion : Time (s): cpu = 00:01:03 ; elapsed = 00:01:06 . Memory (MB): peak = 1139.902 ; gain = 407.781
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:01:15 ; elapsed = 00:01:25 . Memory (MB): peak = 1139.715 ; gain = 408.203
+Finished Renaming Generated Instances : Time (s): cpu = 00:01:03 ; elapsed = 00:01:06 . Memory (MB): peak = 1139.902 ; gain = 407.781
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -273,25 +306,25 @@ Report Check Netlist:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:15 ; elapsed = 00:01:25 . Memory (MB): peak = 1139.715 ; gain = 408.203
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:03 ; elapsed = 00:01:06 . Memory (MB): peak = 1139.902 ; gain = 407.781
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:01:15 ; elapsed = 00:01:25 . Memory (MB): peak = 1139.715 ; gain = 408.203
+Finished Renaming Generated Ports : Time (s): cpu = 00:01:03 ; elapsed = 00:01:06 . Memory (MB): peak = 1139.902 ; gain = 407.781
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:01:15 ; elapsed = 00:01:25 . Memory (MB): peak = 1139.715 ; gain = 408.203
+Finished Handling Custom Attributes : Time (s): cpu = 00:01:03 ; elapsed = 00:01:06 . Memory (MB): peak = 1139.902 ; gain = 407.781
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:01:15 ; elapsed = 00:01:25 . Memory (MB): peak = 1139.715 ; gain = 408.203
+Finished Renaming Generated Nets : Time (s): cpu = 00:01:03 ; elapsed = 00:01:06 . Memory (MB): peak = 1139.902 ; gain = 407.781
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -325,26 +358,26 @@ Report Instance Areas:
 |3     |  counter  |Counter |    18|
 +------+-----------+--------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:01:15 ; elapsed = 00:01:25 . Memory (MB): peak = 1139.715 ; gain = 408.203
+Finished Writing Synthesis Report : Time (s): cpu = 00:01:03 ; elapsed = 00:01:06 . Memory (MB): peak = 1139.902 ; gain = 407.781
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:53 ; elapsed = 00:01:18 . Memory (MB): peak = 1139.715 ; gain = 367.070
-Synthesis Optimization Complete : Time (s): cpu = 00:01:16 ; elapsed = 00:01:25 . Memory (MB): peak = 1139.715 ; gain = 408.203
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:45 ; elapsed = 00:01:02 . Memory (MB): peak = 1139.902 ; gain = 366.629
+Synthesis Optimization Complete : Time (s): cpu = 00:01:03 ; elapsed = 00:01:07 . Memory (MB): peak = 1139.902 ; gain = 407.781
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1150.773 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1149.773 ; gain = 0.000
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1155.121 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1155.484 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
 INFO: [Common 17-83] Releasing license: Synthesis
-19 Infos, 16 Warnings, 16 Critical Warnings and 0 Errors encountered.
+19 Infos, 27 Warnings, 27 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:01:29 ; elapsed = 00:01:44 . Memory (MB): peak = 1155.121 ; gain = 693.027
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1155.121 ; gain = 0.000
+synth_design: Time (s): cpu = 00:01:14 ; elapsed = 00:01:21 . Memory (MB): peak = 1155.484 ; gain = 691.633
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1155.484 ; gain = 0.000
 WARNING: [Constraints 18-5210] No constraints selected for write.
 Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
 INFO: [Common 17-1381] The checkpoint 'C:/Users/stuff/Documents/Projects/FPGA/LEDMatrix8x8/LEDMatrix8x8.runs/synth_1/LEDMatrix8x8.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file LEDMatrix8x8_utilization_synth.rpt -pb LEDMatrix8x8_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Thu Apr 23 11:19:12 2020...
+INFO: [Common 17-206] Exiting Vivado at Mon May 11 10:50:44 2020...

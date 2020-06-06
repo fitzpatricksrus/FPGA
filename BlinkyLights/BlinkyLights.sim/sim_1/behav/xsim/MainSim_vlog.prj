@@ -1,10 +1,15 @@
 # compile verilog/system verilog design source files
 verilog xil_defaultlib  \
-"../../../../BlinkyLights.srcs/sources_1/new/ClockDivider.v" \
 "../../../../BlinkyLights.srcs/sources_1/imports/new/Counter.v" \
 "../../../../BlinkyLights.srcs/sources_1/imports/new/DeMux.v" \
 "../../../../BlinkyLights.srcs/sources_1/new/LED1088AS.v" \
 "../../../../BlinkyLights.srcs/sources_1/new/Main.v" \
+"../../../../BlinkyLights.srcs/sources_1/new/RefreshingLED1088AS.v" \
+
+sv xil_defaultlib  \
+"../../../../BlinkyLights.srcs/sources_1/new/ClockDivider.v" \
+
+verilog xil_defaultlib  \
 "../../../../BlinkyLights.srcs/sim_1/new/MainSim.v" \
 
 # compile glbl module

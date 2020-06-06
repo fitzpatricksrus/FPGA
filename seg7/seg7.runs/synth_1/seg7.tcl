@@ -19,10 +19,6 @@ proc create_report { reportName command } {
 }
 set_param chipscope.maxJobs 1
 set_param ced.repoPaths C:/Users/stuff/AppData/Roaming/Xilinx/Vivado/2019.2/xhub/ced_store
-set_param synth.incrementalSynthesisCache C:/Users/stuff/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-14104-JohnsGo/incrSyn
-set_param xicom.use_bs_reader 1
-set_msg_config -id {Synth 8-256} -limit 10000
-set_msg_config -id {Synth 8-638} -limit 10000
 create_project -in_memory -part xc7s25csga324-1
 
 set_param project.singleFileAddWarning.threshold 0
@@ -35,7 +31,11 @@ set_property target_language Verilog [current_project]
 set_property board_part digilentinc.com:arty-s7-25:part0:1.0 [current_project]
 set_property ip_output_repo c:/Users/stuff/Documents/Projects/FPGA/seg7/seg7.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
-read_verilog -library xil_defaultlib C:/Users/stuff/Documents/Projects/FPGA/seg7/seg7.srcs/sources_1/new/seg7.v
+read_verilog -library xil_defaultlib {
+  C:/Users/stuff/Documents/Projects/FPGA/seg7/seg7.srcs/sources_1/imports/new/ClockDivider.v
+  C:/Users/stuff/Documents/Projects/FPGA/seg7/seg7.srcs/sources_1/new/Seg7Display.v
+  C:/Users/stuff/Documents/Projects/FPGA/seg7/seg7.srcs/sources_1/new/seg7.v
+}
 # Mark all dcp files as not used in implementation to prevent them from being
 # stitched into the results of this synthesis run. Any black boxes in the
 # design are intentionally left as such for best results. Dcp files will be

@@ -1,0 +1,7 @@
+0.6
+2019.2
+Dec  5 2019
+05:06:03
+C:/Users/stuff/Documents/Projects/FPGA/MatrixDriver/MatrixDriver.sim/sim_1/synth/func/xsim/ClockDividerSim_func_synth.v,1589328425,verilog,,,,ClockDividerMain;glbl,,,,,,,,
+C:/Users/stuff/Documents/Projects/FPGA/MatrixDriver/MatrixDriver.srcs/sim_1/imports/new/ClockDividerSim.v,1589321381,systemVerilog,,,,ClockDividerSim,,,,,,,,
+C:/Users/stuff/Documents/Projects/FPGA/MatrixDriver/MatrixDriver.srcs/sim_1/imports/new/MainSim.v,1589210452,verilog,,,,MainSim,,,,,,,,

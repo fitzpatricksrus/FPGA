@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2019.2.1 (64-bit)
+# SW Build 2729669 on Thu Dec  5 04:49:17 MST 2019
+# IP Build 2729494 on Thu Dec  5 07:38:25 MST 2019
+# Start of session at: Tue May 12 20:29:02 2020
+# Process ID: 3392
+# Current directory: C:/Users/stuff/Documents/Projects/FPGA/MatrixDriver/MatrixDriver.runs/synth_1
+# Command line: vivado.exe -log ClockDividerMain.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source ClockDividerMain.tcl
+# Log file: C:/Users/stuff/Documents/Projects/FPGA/MatrixDriver/MatrixDriver.runs/synth_1/ClockDividerMain.vds
+# Journal file: C:/Users/stuff/Documents/Projects/FPGA/MatrixDriver/MatrixDriver.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source ClockDividerMain.tcl -notrace

@@ -1,0 +1,12 @@
+# compile verilog/system verilog design source files
+sv xil_defaultlib  \
+"../../../../MatrixDriver.srcs/sources_1/imports/new/ClockDivider.v" \
+"../../../../MatrixDriver.srcs/sources_1/imports/new/LEDMatrixDriver.v" \
+"../../../../MatrixDriver.srcs/sources_1/imports/new/Main.v" \
+"../../../../MatrixDriver.srcs/sim_1/imports/new/MainSim.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort
