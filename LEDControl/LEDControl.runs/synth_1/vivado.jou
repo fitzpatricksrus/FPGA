@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2020.1 (64-bit)
+# SW Build 2902540 on Wed May 27 19:54:49 MDT 2020
+# IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
+# Start of session at: Tue Oct 20 18:39:38 2020
+# Process ID: 7756
+# Current directory: C:/Users/stuff/Documents/Projects/FPGA/LEDControl/LEDControl.runs/synth_1
+# Command line: vivado.exe -log LED_Matrix_Stepper.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source LED_Matrix_Stepper.tcl
+# Log file: C:/Users/stuff/Documents/Projects/FPGA/LEDControl/LEDControl.runs/synth_1/LED_Matrix_Stepper.vds
+# Journal file: C:/Users/stuff/Documents/Projects/FPGA/LEDControl/LEDControl.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source LED_Matrix_Stepper.tcl -notrace
